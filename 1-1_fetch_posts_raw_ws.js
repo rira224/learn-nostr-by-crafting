@@ -2,7 +2,7 @@ const { currUnixtime } = require("./utils.js");
 require("websocket-polyfill");
 
 /* Q(おまけ): URLを変更して、別のリレーの様子も見てみよう */
-const relayUrl = "wss://relay-jp.nostr.wirednet.jp"; 
+const relayUrl = "wss://relay.nostr.wirednet.jp"; 
 
 const main = () => {
   const ws = new WebSocket(relayUrl);
@@ -10,9 +10,9 @@ const main = () => {
   ws.onopen = () => {
     /* Q-1: REQメッセージを書いてみよう */
     const req = [
-      ???, 
+      ぽわ, 
       "subscription", // 購読ID。空でない・長すぎない文字列であれば何でもOK
-      ???
+      powa001
     ];
     ws.send(JSON.stringify(req));
   };
